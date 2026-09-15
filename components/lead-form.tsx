@@ -1,68 +1,36 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Send, CheckCircle2, Loader2 } from "lucide-react";
-
-const WEB3FORMS_ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "REPLACE_WITH_YOUR_WEB3FORMS_KEY";
-
-type Status = "idle" | "loading" | "success" | "error";
+import { Send } from "lucide-react";
 
 export function LeadForm() {
-  const [status, setStatus] = useState<Status>("idle");
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("loading");
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") || "");
+    const phone = String(formData.get("phone") || "");
+    const email = String(formData.get("email") || "");
+    const message = String(formData.get("message") || "");
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", "New inquiry — 1066 Ruppert Rd, Marco Island");
-    formData.append("from_name", "1066 Ruppert Rd Listing Site");
+    const body = [
+      `Name: ${name}`,
+      phone ? `Phone: ${phone}` : null,
+      `Email: ${email}`,
+      "",
+      message,
+    ]
+      .filter(Boolean)
+      .join("\n");
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
-      });
+    const mailto = `mailto:manuelarealty@gmail.com?subject=${encodeURIComponent(
+      "New inquiry — 1066 Ruppert Rd, Marco Island"
+    )}&body=${encodeURIComponent(body)}`;
 
-      // Web3Forms normally replies with JSON, but can occasionally return an
-      // HTML page instead (e.g. bot-protection interstitials). Treat any
-      // successful HTTP response as delivered rather than failing on a
-      // non-JSON body, so real visitors never see a false error.
-      let delivered = response.ok;
-      try {
-        const result = await response.json();
-        delivered = Boolean(result.success);
-      } catch {
-        // Non-JSON body — fall back to the HTTP status check above.
-      }
-
-      if (delivered) {
-        setStatus("success");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    window.location.href = mailto;
+    setSubmitted(true);
   };
-
-  if (status === "success") {
-    return (
-      <div className="flex flex-col items-center gap-3 rounded-2xl bg-white/10 p-10 text-center">
-        <CheckCircle2 className="h-10 w-10 text-emerald-300" />
-        <p className="text-lg font-semibold text-white">Thank you!</p>
-        <p className="text-white/75">
-          Your message has been sent to Manuela. She&apos;ll be in touch
-          shortly.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form
@@ -127,26 +95,17 @@ export function LeadForm() {
 
       <button
         type="submit"
-        disabled={status === "loading"}
-        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-emerald-400 px-8 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300 disabled:opacity-60"
+        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-emerald-400 px-8 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300"
       >
-        {status === "loading" ? (
-          <>
-            <Loader2 className="h-4 w-4 animate-spin" />
-            Sending...
-          </>
-        ) : (
-          <>
-            <Send className="h-4 w-4" />
-            Request Information
-          </>
-        )}
+        <Send className="h-4 w-4" />
+        Request Information
       </button>
 
-      {status === "error" && (
-        <p className="text-sm text-red-300">
-          Something went wrong sending your message — please call or email
-          Manuela directly using the details above.
+      {submitted && (
+        <p className="text-sm text-emerald-300">
+          Opening your email app with this message pre-filled — just hit
+          send. If nothing opened, please email manuelarealty@gmail.com
+          directly.
         </p>
       )}
     </form>
