@@ -27,8 +27,20 @@ export function LeadForm() {
         headers: { Accept: "application/json" },
         body: formData,
       });
-      const result = await response.json();
-      if (result.success) {
+
+      // Web3Forms normally replies with JSON, but can occasionally return an
+      // HTML page instead (e.g. bot-protection interstitials). Treat any
+      // successful HTTP response as delivered rather than failing on a
+      // non-JSON body, so real visitors never see a false error.
+      let delivered = response.ok;
+      try {
+        const result = await response.json();
+        delivered = Boolean(result.success);
+      } catch {
+        // Non-JSON body — fall back to the HTTP status check above.
+      }
+
+      if (delivered) {
         setStatus("success");
         form.reset();
       } else {
