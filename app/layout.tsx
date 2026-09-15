@@ -54,6 +54,12 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  other: {
+    "geo.region": "US-FL",
+    "geo.placename": "Marco Island",
+    "geo.position": "25.9407;-81.7192",
+    ICBM: "25.9407, -81.7192",
+  },
 };
 
 export default function RootLayout({
@@ -79,6 +85,11 @@ export default function RootLayout({
       postalCode: "34145",
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 25.9407,
+      longitude: -81.7192,
+    },
     numberOfRooms: 5,
     numberOfBathroomsTotal: 3,
     floorSize: {
@@ -86,6 +97,23 @@ export default function RootLayout({
       value: 3307,
       unitCode: "FTK",
     },
+    amenityFeature: [
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Solar panels with battery backup",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Direct gulf access",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Circular driveway",
+        value: true,
+      },
+    ],
     broker: {
       "@type": "RealEstateAgent",
       name: "Manuela Schinagl",

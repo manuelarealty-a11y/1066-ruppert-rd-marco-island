@@ -1,4 +1,5 @@
 import { Phone, Mail, Globe } from "lucide-react";
+import { LeadForm } from "@/components/lead-form";
 
 export function Contact() {
   return (
@@ -45,6 +46,8 @@ export function Contact() {
           <Globe className="h-4 w-4" />
           naplesrealestate.sale
         </a>
+
+        <LeadForm />
       </div>
     </section>
   );
