@@ -7,6 +7,10 @@ import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
 const photos = [
   { src: "https://g.tlcdn.com/view/4c101b628ad749b5997dc9395a2041cf.jpg", alt: "1066 Ruppert Rd Marco Island — front exterior with circular driveway" },
   { src: "https://g.tlcdn.com/view/e01a2c6ff1b1424f9c00cc1fbc5cebed.jpg", alt: "1066 Ruppert Rd Marco Island — entry facade" },
+  { src: "https://g.tlcdn.com/view/26aae5bcdaf54781a2bb977a69648f07.jpg", alt: "1066 Ruppert Rd Marco Island — rear exterior with pool and spa" },
+  { src: "https://g.tlcdn.com/view/51febbcae21b45cc9235238fd421d53f.jpg", alt: "1066 Ruppert Rd Marco Island — covered lanai, pool, and spa" },
+  { src: "https://g.tlcdn.com/view/2a9403c4dd1c46f395ae34b15e02a7d4.jpg", alt: "1066 Ruppert Rd Marco Island — private boat dock with lift" },
+  { src: "https://g.tlcdn.com/view/b4403228ed834935a73ef4d91c58462c.jpg", alt: "1066 Ruppert Rd Marco Island — boat dock and canal view" },
   { src: "https://g.tlcdn.com/view/5eb859d749fc4affbcd144ef1c59a449.jpg", alt: "1066 Ruppert Rd Marco Island — foyer" },
   { src: "https://g.tlcdn.com/view/d4833d4f34934d3abdf3969ad9a61da7.jpg", alt: "1066 Ruppert Rd Marco Island — living room with canal view" },
   { src: "https://g.tlcdn.com/view/8ee88c9c756a42468a03e638114476b5.jpg", alt: "1066 Ruppert Rd Marco Island — great room" },
@@ -15,6 +19,12 @@ const photos = [
   { src: "https://g.tlcdn.com/view/f6a372bf3f144dd1aa609eeb1aaee792.jpg", alt: "1066 Ruppert Rd Marco Island — dining room" },
   { src: "https://g.tlcdn.com/view/40facc6e3c6541f9838f0a08fdd69afa.jpg", alt: "1066 Ruppert Rd Marco Island — sitting room" },
   { src: "https://g.tlcdn.com/view/fdaaaf66abc84eabb83ffde49435b50f.jpg", alt: "1066 Ruppert Rd Marco Island — additional interior view" },
+  { src: "https://g.tlcdn.com/view/f3422aa04f8f4f41adf0f9ef9a94e36c.jpg", alt: "1066 Ruppert Rd Marco Island — primary bedroom with pool access" },
+  { src: "https://g.tlcdn.com/view/c8142a7472bc4e7991bd4b22748e8a4e.jpg", alt: "1066 Ruppert Rd Marco Island — bedroom" },
+  { src: "https://g.tlcdn.com/view/968bf8ae50d7458b91a9d23d9df67823.jpg", alt: "1066 Ruppert Rd Marco Island — bedroom with TV" },
+  { src: "https://g.tlcdn.com/view/83be4234b20449c9b368b5671d47b4ee.jpg", alt: "1066 Ruppert Rd Marco Island — bathroom with soaking tub and shower" },
+  { src: "https://g.tlcdn.com/view/8832d2017e054ef8b9f2f7d47825d532.jpg", alt: "1066 Ruppert Rd Marco Island — bathroom with pool access" },
+  { src: "https://g.tlcdn.com/view/83870fe51aca400290fbe48cde385918.jpg", alt: "1066 Ruppert Rd Marco Island — screened balcony with water view" },
 ];
 
 export function Gallery() {
