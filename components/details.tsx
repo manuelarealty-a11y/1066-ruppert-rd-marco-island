@@ -42,6 +42,7 @@ export function Details() {
             markets, 1066 Ruppert Rd presents an exceptional opportunity to
             enjoy the Marco Island lifestyle.
           </p>
+          <p className="mt-6 text-sm text-slate-400">MLS #2261311</p>
 
           <div className="mt-8 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-6">
             <p className="text-sm font-semibold uppercase tracking-widest text-emerald-700">
