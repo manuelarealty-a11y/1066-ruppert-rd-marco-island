@@ -1,7 +1,7 @@
 const faqs = [
   {
     q: "What is the asking price?",
-    a: "The home is offered at $2,700,000, reduced from $3,100,000 — a $400,000 price improvement.",
+    a: "The home is offered at $2,750,000, reduced from $3,100,000 — a $350,000 price improvement.",
   },
   {
     q: "Where is 1066 Ruppert Rd located?",

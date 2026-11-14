@@ -44,10 +44,10 @@ export function Hero() {
 
           <div className="mt-8">
             <p className="font-serif text-4xl drop-shadow-lg sm:text-5xl">
-              $2,700,000
+              $2,750,000
             </p>
             <p className="mt-3 inline-block rounded-full bg-emerald-400/90 px-4 py-1.5 text-sm font-semibold text-slate-950">
-              Price improvement — reduced $400,000 from $3,100,000
+              Price improvement — reduced $350,000 from $3,100,000
             </p>
             <p className="mt-3 flex items-center gap-2 text-sm font-semibold tracking-widest text-white drop-shadow-md">
               <Calendar className="h-4 w-4" />

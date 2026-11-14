@@ -3,9 +3,9 @@ import "./globals.css";
 
 const siteUrl = "https://1066ruppertrd.com";
 const title =
-  "1066 Ruppert Rd, Marco Island, FL 34145 | $2,700,000 | 5BR Gulf-Access Home For Sale";
+  "1066 Ruppert Rd, Marco Island, FL 34145 | $2,750,000 | 5BR Gulf-Access Home For Sale";
 const description =
-  "Offered at $2,700,000 (reduced from $3,100,000). Refined 5 bedroom, 3 bathroom Marco Island home with ~3,307 sqft, quick gulf access, solar power with battery backup, and a circular driveway. Offered by Manuela Schinagl, Manuela Realty International. MLS #2261311.";
+  "Offered at $2,750,000 (reduced from $3,100,000). Refined 5 bedroom, 3 bathroom Marco Island home with ~3,307 sqft, quick gulf access, solar power with battery backup, and a circular driveway. Offered by Manuela Schinagl, Manuela Realty International. MLS #2261311.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -75,7 +75,7 @@ export default function RootLayout({
     url: siteUrl,
     offers: {
       "@type": "Offer",
-      price: 2700000,
+      price: 2750000,
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },
