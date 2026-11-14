@@ -1,5 +1,9 @@
 const faqs = [
   {
+    q: "What is the asking price?",
+    a: "The home is offered at $2,700,000, reduced from $3,100,000 — a $400,000 price improvement.",
+  },
+  {
     q: "Where is 1066 Ruppert Rd located?",
     a: "1066 Ruppert Rd is in the heart of Marco Island, Florida (34145), with quick and direct access to the Gulf of Mexico by boat.",
   },

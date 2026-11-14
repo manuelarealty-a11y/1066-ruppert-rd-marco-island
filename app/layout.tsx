@@ -3,9 +3,9 @@ import "./globals.css";
 
 const siteUrl = "https://1066ruppertrd.com";
 const title =
-  "1066 Ruppert Rd, Marco Island, FL 34145 | 5BR Gulf-Access Home For Sale";
+  "1066 Ruppert Rd, Marco Island, FL 34145 | $2,700,000 | 5BR Gulf-Access Home For Sale";
 const description =
-  "Refined 5 bedroom, 3 bathroom Marco Island home with ~3,307 sqft, quick gulf access, solar power with battery backup, and a circular driveway. Offered by Manuela Schinagl, Manuela Realty International. MLS #2261311.";
+  "Offered at $2,700,000 (reduced from $3,100,000). Refined 5 bedroom, 3 bathroom Marco Island home with ~3,307 sqft, quick gulf access, solar power with battery backup, and a circular driveway. Offered by Manuela Schinagl, Manuela Realty International. MLS #2261311.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "US-FL",
     "geo.placename": "Marco Island",
-    "geo.position": "25.9407;-81.7192",
-    ICBM: "25.9407, -81.7192",
+    "geo.position": "25.96702;-81.72962",
+    ICBM: "25.96702, -81.72962",
   },
 };
 
@@ -73,6 +73,13 @@ export default function RootLayout({
     name: "1066 Ruppert Rd, Marco Island, FL 34145",
     description,
     url: siteUrl,
+    offers: {
+      "@type": "Offer",
+      price: 2700000,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    datePosted: "2026-07-24",
     image: [
       "https://g.tlcdn.com/view/4c101b628ad749b5997dc9395a2041cf.jpg",
       "https://g.tlcdn.com/view/e01a2c6ff1b1424f9c00cc1fbc5cebed.jpg",
@@ -87,8 +94,8 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 25.9407,
-      longitude: -81.7192,
+      latitude: 25.96702,
+      longitude: -81.72962,
     },
     numberOfRooms: 5,
     numberOfBathroomsTotal: 3,
@@ -116,6 +123,11 @@ export default function RootLayout({
     ],
     additionalProperty: [
       { "@type": "PropertyValue", name: "MLS Number", value: "2261311" },
+      {
+        "@type": "PropertyValue",
+        name: "MLS Number (NABOR)",
+        value: "226027033",
+      },
     ],
     broker: {
       "@type": "RealEstateAgent",
