@@ -5,7 +5,6 @@ export function Hero() {
     <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-950 text-white">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        style={{ filter: "brightness(1.25) saturate(1.1)" }}
         src="https://g.tlcdn.com/view/15c036c631e641ccaafd8ca5d5a05a04.mp4"
         autoPlay
         muted
@@ -13,7 +12,8 @@ export function Hero() {
         playsInline
         poster="https://g.tlcdn.com/view/4c101b628ad749b5997dc9395a2041cf.jpg"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/35 via-transparent to-slate-950/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/30 to-slate-950/85" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-950/20 to-transparent" />
 
       <div className="relative z-10 flex min-h-[92vh] flex-col justify-between px-6 py-8 md:px-14 md:py-10">
         <div className="flex items-center justify-between">
