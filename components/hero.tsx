@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Hero() {
   return (
@@ -48,10 +48,6 @@ export function Hero() {
             </p>
             <p className="mt-3 inline-block rounded-full bg-emerald-400/90 px-4 py-1.5 text-sm font-semibold text-slate-950">
               Price improvement — reduced $350,000 from $3,100,000
-            </p>
-            <p className="mt-3 flex items-center gap-2 text-sm font-semibold tracking-widest text-white drop-shadow-md">
-              <Calendar className="h-4 w-4" />
-              OPEN HOUSE: SUNDAY, NOVEMBER 15, 1–4 PM
             </p>
           </div>
 
