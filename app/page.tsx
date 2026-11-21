@@ -9,6 +9,9 @@ import { SiteFooter } from "@/components/site-footer";
 export default function ListingPage() {
   return (
     <main>
+      <div className="bg-amber-400 px-6 py-3 text-center text-sm font-bold tracking-wide text-slate-950 md:text-base">
+        OPEN HOUSE — Sunday, November 22, 1–4 PM — Come see it in person.
+      </div>
       <Hero />
       <Gallery />
       <Details />
@@ -19,3 +22,4 @@ export default function ListingPage() {
     </main>
   );
 }
+

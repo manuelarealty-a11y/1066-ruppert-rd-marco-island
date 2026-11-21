@@ -22,9 +22,9 @@ export function Details() {
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
             Discover 1066 Ruppert Road, a refined Marco Island residence
-            offering quick and direct access to the gulf, generous living
-            space, modern efficiency, and the relaxed sophistication of
-            Southwest Florida living. This impressive home features 5
+            offering direct Gulf access with no bridges to the Gulf, generous
+            living space, modern efficiency, and the relaxed sophistication
+            of Southwest Florida living. This impressive home features 5
             bedrooms, 3 full bathrooms, and approximately 3,307 square feet of
             thoughtfully designed living space.
           </p>
@@ -77,3 +77,4 @@ export function Details() {
     </section>
   );
 }
+
